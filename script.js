@@ -2,6 +2,10 @@ const Input = document.getElementById("input");
 const output = document.getElementById("output")
 const warn = document.getElementById("warning")
 
+// SaveList
+function savelist() {
+    localStorage.setItem("list", output.innerHTML)
+}
 
 // === FUNCTION ADD ACTIVITY ===
 addEventListener("keypress", function valueinput(keyPress) {
@@ -37,9 +41,7 @@ function chech(x) {
     savelist()
 }
 
-function savelist() {
-    localStorage.setItem("list", output.innerHTML)
-}
+
 function loadlist() {
     output.innerHTML = localStorage.getItem("list")
 }
