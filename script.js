@@ -6,6 +6,7 @@ const warn = document.getElementById("warning")
 function savelist() {
     localStorage.setItem("list", output.innerHTML)
 }
+setInterval(savelist(), 1000);
 
 // === FUNCTION ADD ACTIVITY ===
 addEventListener("keypress", function valueinput(keyPress) {
@@ -17,7 +18,7 @@ addEventListener("keypress", function valueinput(keyPress) {
     } else {
         warn.innerHTML = "warn"
     }
-    savelist()
+    
 })
 
 function AddActivity() {
@@ -29,17 +30,17 @@ function AddActivity() {
     } else {
         warn.innerHTML = "warn"
     }
-    savelist()
+    
 }
 
 function removeitem(e) {
     e.parentElement.remove()
-    savelist()
+    
 }
 
 function chech(x) {
     x.style.textDecoration =  "line-through";
-    savelist()
+    
 }
 
 
