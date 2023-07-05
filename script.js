@@ -6,7 +6,7 @@ const warn = document.getElementById("warning")
 function savelist() {
     localStorage.setItem("list", output.innerHTML)
 }
-setInterval(savelist(), 1000);
+setInterval(savelist, 1000);
 
 // === FUNCTION ADD ACTIVITY ===
 addEventListener("keypress", function valueinput(keyPress) {
