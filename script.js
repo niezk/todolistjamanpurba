@@ -22,12 +22,13 @@ addEventListener("keypress", function valueinput(keyPress) {
 
 function AddActivity() {
     if (Input.value.trim().length !== 0) {
-        let list = "<div class='list' style='display: flex;'><p id='content'  onclick='chech(this)'>" + Input.value + "</p><span onclick='removeitem(this)'>[x]</span></div>" 
-        output.insertAdjacentHTML("afterend", list)
+        let list = "<div class='list' style='display: flex;'><p id='content'  onclick='chech(this)'>" + Input.value + "</p><span onclick='removeitem(this)'>[x]</span></div>" // list
+        output.insertAdjacentHTML("beforeend", list)
         warn.innerHTML = "Tidak ada warn"
-        } else {
-            warn.innerHTML = "warn"
-        }
+        Input.value = ""
+    } else {
+        warn.innerHTML = "warn"
+    }
     savelist()
 }
 
